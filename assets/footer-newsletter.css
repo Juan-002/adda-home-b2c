@@ -1,0 +1,95 @@
+.footer-newsletter{
+    max-width: 790px;
+    margin: 15px;
+    padding: 30px 0;
+}
+
+.footer-newsletter .footer-newsletter__title{
+    color: #3B342B;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.footer-newsletter .footer-newsletter__description{
+    color: #3B342B;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 35px;
+    padding: 0 50px;
+}
+
+.footer-newsletter .footer-newsletter__email{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid #3B342B;
+}
+.footer-newsletter .footer-newsletter__email input{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 0;
+    padding: 8px 13px;
+    width: 66%;
+    margin-right: 5px;
+}
+.footer-newsletter .footer-newsletter__email input:focus-visible{
+    outline: none;
+}
+.footer-newsletter .footer-newsletter__email button{
+    color: #3B342B;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-right: 12px;
+}
+
+.footer-newsletter .footer-newsletter__policy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 18px;
+    color: #3B342B;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter .footer-newsletter__policy a{
+    text-decoration: underline;
+}
+.footer-newsletter .alert{
+    padding: 0.7rem 1rem;
+}
+@media (min-width: 767px){
+    .footer-newsletter{
+        margin: auto;
+        padding: 50px 0;
+    }
+    .footer-newsletter .footer-newsletter__title{
+        font-size: 32px;
+    }
+    .footer-newsletter .footer-newsletter__description{
+        margin-bottom: 40px;
+    }
+    .footer-newsletter .footer-newsletter__email input,
+    .footer-newsletter .footer-newsletter__email button{
+        font-size: 16px;
+    }
+    .footer-newsletter .footer-newsletter__policy{
+        margin-top: 15px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-contact",
+      "disabled": true,
+      "settings": {
+        "show_contact_title": false,
+        "heading_align": "text-center"
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "blocks": {
+        "text_AytXx7": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Horario de atención al público<\/strong><\/p><p>Lunes a Viernes 8:00 a.m a 17:00 p.m<\/p><p><\/p>",
+            "half_width": false
+          }
+        },
+        "contact-name-2": {
+          "type": "name",
+          "settings": {
+            "required": true,
+            "half_width": false
+          }
+        },
+        "contact-email-3": {
+          "type": "email",
+          "settings": {
+            "required": true,
+            "half_width": false
+          }
+        },
+        "custom_niGyd9": {
+          "type": "custom",
+          "settings": {
+            "title": "Asunto",
+            "type": "text",
+            "required": true,
+            "half_width": false
+          }
+        },
+        "contact-body-5": {
+          "type": "body",
+          "settings": {
+            "required": true,
+            "half_width": false
+          }
+        }
+      },
+      "block_order": [
+        "text_AytXx7",
+        "contact-name-2",
+        "contact-email-3",
+        "custom_niGyd9",
+        "contact-body-5"
+      ],
+      "settings": {
+        "heading": "{{ page.title }}",
+        "heading_align": "text-center",
+        "image_position": "top",
+        "color_scheme": "1",
+        "full_width": false,
+        "button_style": "btn btn--primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "form"
+  ]
+}

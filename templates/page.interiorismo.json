@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": false,
+        "heading_align": "text-center"
+      }
+    },
+    "multi_row_qLdqXL": {
+      "type": "multi-row",
+      "blocks": {
+        "row_Membbz": {
+          "type": "row",
+          "settings": {
+            "image_position": "right",
+            "image": "shopify:\/\/shop_images\/SERVICIO_DE_INTERIORISMO_ADDA_HOME_final.jpg",
+            "title": "Asesoramiento interiorismo",
+            "title_tag": "h2",
+            "description": "<p>Adda Home facilita un nuevo servicio de asesoramiento de interiorismo para darle personalidad a los ambientes de vuestro hogar. Gracias a este servicio podemos hacer realidad las ideas de decoración que más os gusten y, además, aconsejaros y ayudaros a establecer una decoración del hogar que encaje con vuestra forma de ser, vuestro estilo y vuestra idea. De esta manera creamos juntos un espacio lleno de armonía y vivezas.<br\/><br\/>A la hora de elegir los muebles y los detalles perfectos para tu espacio es fundamental tener en cuenta las medidas, las combinaciones la funcionalidad y el estilo. Contacta con nosotros y envíanos las medidas del espacio que quieres decorar. Nosotros estudiaremos el mejor proyecto de distribución para cada estancia.<\/p>",
+            "button_text": "",
+            "button_url": "shopify:\/\/collections\/all",
+            "button_open": false
+          }
+        }
+      },
+      "block_order": [
+        "row_Membbz"
+      ],
+      "settings": {
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multi_row_qLdqXL"
+  ]
+}

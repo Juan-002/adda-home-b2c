@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>
+  {%- if request.page_type == 'password' -%}
+    {{- shop.name -}}
+  {%- else -%}
+    {{- page_title -}}
+    {%- if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif -%}
+    {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif -%}
+    {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  {%- endif -%}
+</title>
+
+{%- if canonical_url != blank -%}
+  {%- liquid
+    assign canonical = canonical_url
+    if template.name contains 'product'
+      assign last_handle_string = product.handle | split: '-' | compact | last
+
+      assign number_test = last_handle_string | plus: 1 | json
+
+      if number_test contains '"'
+        assign is_number = false
+      else
+        assign is_number = true
+      endif
+
+      if is_number
+        assign canonical_product_handle = product.handle | replace_last: last_handle_string, '' | replace_last: '-', ''
+        assign canonical_product = all_products[canonical_product_handle]
+      endif
+    endif
+
+    if canonical_product
+      assign canonical = canonical | replace: product.handle, canonical_product_handle
+    endif
+  -%}
+
+  <link rel="canonical" href="{{ canonical }}">
+{%- endif -%}
+
+{%- if settings.favicon != blank -%}
+  {%- liquid
+    assign image_type = settings.favicon | split: '?' | first | split: '.' | last | downcase
+    if image_type == 'svg'
+      assign image_type = 'svg+xml'
+    endif
+  -%}
+  <link rel="icon" href="{{ settings.favicon | image_url: width: 48, height: 48 }}" type="image/{{ image_type }}">
+  <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180, height: 180 }}">
+{%- endif -%}
+
+{%- if page_description -%}
+  <meta name="description" content="{{ page_description | escape }}">
+{%- endif -%}

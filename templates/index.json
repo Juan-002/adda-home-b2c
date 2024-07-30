@@ -1,0 +1,240 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/GARPE_INTERIORES_-_AMBIENTE.2024_105.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/GARPE_INTERIORES_-_AMBIENTE.2024_105.jpg",
+            "url": "",
+            "overlay_position": "middle-left",
+            "overlay_position_mobile": "bottom",
+            "overlay_text_align": "start",
+            "overlay_text_align_mobile": "center",
+            "mob_center_text": false,
+            "subheading": "",
+            "heading": "NEW IN",
+            "heading_size": "h0",
+            "heading_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_1_label": "Transforma tu hogar",
+            "button_1_link": "shopify:\/\/collections\/novedades",
+            "button_1_style": "btn btn--primary",
+            "button_2_label": "",
+            "button_2_link": "\/",
+            "button_2_style": "btn btn--primary",
+            "transparent_content_color": "#ffffff",
+            "countdown_show": false,
+            "countdown_end_date": "",
+            "countdown_end_time": "",
+            "countdown_end_text": "",
+            "enlarge_end_text": false,
+            "countdown_hide_on_end": false,
+            "use_custom_colors": false,
+            "count_color": "#ffffff",
+            "bg_color": "#070707",
+            "bg_grad": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide-1"
+      ],
+      "settings": {
+        "height_mode": "auto",
+        "fixed_height_desktop": 600,
+        "fixed_height_mobile": 350,
+        "mobile_stacked": false,
+        "nav_style": "slideshow_nav_lines",
+        "pagination_color": "#ffffff",
+        "nav_position": "justify-center",
+        "transition": "slide-fade",
+        "autoplay": true,
+        "slider_pause": true,
+        "autoplay_speed": 3,
+        "color_scheme": "white",
+        "full_width": true,
+        "tint_color": "#000000",
+        "tint_opacity": 0,
+        "accessibility_info": "",
+        "prevent_animation": true
+      }
+    },
+    "featured_collection_2_kBJnRt": {
+      "type": "featured-collection-2",
+      "blocks": {
+        "collection_ezKAb4": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-home-cuadros.jpg",
+            "title": "Cuadros y lienzos",
+            "title_tag": "h3",
+            "button_text": "Comprar ahora",
+            "button_url": "shopify:\/\/collections\/lienzos-y-cuadros",
+            "button_open": false
+          }
+        },
+        "collection_zXFFUg": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GARPE_INTERIORES_-_AMBIENTE.2024_109_de1aa75b-09f2-4db0-8844-60785160043b.jpg",
+            "title": "Sillas y taburetes",
+            "title_tag": "h3",
+            "button_text": "Comprar ahora",
+            "button_url": "shopify:\/\/collections\/sillas-taburetes",
+            "button_open": false
+          }
+        },
+        "collection_prDdkD": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-home-consolas.jpg",
+            "title": "Consolas",
+            "title_tag": "h3",
+            "button_text": "Comprar ahora",
+            "button_url": "shopify:\/\/collections\/consolas",
+            "button_open": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_ezKAb4",
+        "collection_zXFFUg",
+        "collection_prDdkD"
+      ],
+      "settings": {
+        "title": "Categorías destacadas",
+        "title_tag": "h2",
+        "padding_top": 74,
+        "padding_bottom": 90
+      }
+    },
+    "collection_products_Y6Cg4d": {
+      "type": "collection-products",
+      "blocks": {
+        "collection_3nXHMp": {
+          "type": "collection",
+          "settings": {
+            "title": "MÁS VENDIDOS",
+            "collection": "mas-vendidos"
+          }
+        },
+        "collection_mQLrYh": {
+          "type": "collection",
+          "settings": {
+            "title": "OFERTAS",
+            "collection": "ofertas"
+          }
+        },
+        "collection_zHGVKh": {
+          "type": "collection",
+          "settings": {
+            "title": "NOVEDADES",
+            "collection": "novedades"
+          }
+        }
+      },
+      "block_order": [
+        "collection_3nXHMp",
+        "collection_mQLrYh",
+        "collection_zHGVKh"
+      ],
+      "settings": {
+        "title": "Top ventas",
+        "title_tag": "h2",
+        "number_of_products": 8,
+        "padding_top": 6,
+        "padding_bottom": 100
+      }
+    },
+    "multi_row_mf6hKD": {
+      "type": "multi-row",
+      "blocks": {
+        "row_9E9jYq": {
+          "type": "row",
+          "settings": {
+            "image_position": "right",
+            "image": "shopify:\/\/shop_images\/16._LOS_MUEBLES_DEL_SALON.jpg",
+            "title": "Los muebles del salón",
+            "title_tag": "h2",
+            "title_underline": false,
+            "description": "<p>Atemporal y en evolución, sin límites de expresión,construimos espacios en torno a las vidas que llevamos. El uso de muebles y objetos de diseño, que respetan el propósito de un espacio, crean ambientes hermosos y habitables, los que más nos gustan. Desde elegantes y cómodas butacas hasta versátiles mesas de centro y prácticos muebles de almacenamiento, en Adda Home tenemos todo lo que necesitas para crear un espacio acogedor y funcional.<\/p>",
+            "button_text": "Comprar ahora",
+            "button_url": "shopify:\/\/collections\/muebles-y-asientos",
+            "button_open": false
+          }
+        },
+        "row_8DX4JX": {
+          "type": "row",
+          "settings": {
+            "image_position": "left",
+            "image": "shopify:\/\/shop_images\/17._TE_ASESORAMOS_EN_INTERIORISMO.jpg",
+            "title": "Te asesoramos en Interiorismo",
+            "title_tag": "h2",
+            "title_underline": false,
+            "description": "<p>Adda Home facilita un servicio de asesoramiento en interiorismo para darle personalidad a los ambientes de vuestro hogar.MGracias a este servicio podemos hacer realidad las ideas de decoración que más os gusten y, además, aconsejaros y ayudaros a establecer una decoración del hogar  que encaje con vuestra forma de ser, vuestro estilo y vuestra idea. De esta manera creamos juntos un espacio lleno de armonía y vivezas.<\/p>",
+            "button_text": "Saber más",
+            "button_url": "shopify:\/\/pages\/asesoramiento-interiorismo",
+            "button_open": false
+          }
+        },
+        "row_dttUHN": {
+          "type": "row",
+          "settings": {
+            "image_position": "right",
+            "image": "shopify:\/\/shop_images\/18._ESTILOS.jpg",
+            "title": "Estilos",
+            "title_tag": "h2",
+            "title_underline": false,
+            "description": "<p>Adda Home ofrece una amplia gama de artículos de diversos estilos para que puedas encontrar siempre algo que te identifique. Desde la calidez del <strong>estilo natural<\/strong> hasta la elegancia minimalista del <strong>estilo moderno<\/strong>, nuestra colección abarca opciones para todos los gustos. Fusionamos funcionalidad y estilo en muebles sofisticados y vanguardistas. También exploramos el <strong>estilo romántico <\/strong>de épocas pasadas y el encanto opulento del <strong>estilo glam<\/strong>. Además, ofrecemos una selección especial de <strong>muebles y decoración para niños<\/strong>, añadiendo un toque juvenil y colorido a cualquier hogar.<\/p>",
+            "button_text": "Comprar ahora",
+            "button_url": "shopify:\/\/collections\/estilos",
+            "button_open": false
+          }
+        }
+      },
+      "block_order": [
+        "row_9E9jYq",
+        "row_8DX4JX",
+        "row_dttUHN"
+      ],
+      "custom_css": [
+        ".info__description {text-align: justify;}"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 70
+      }
+    },
+    "1708016630c6e31cd8": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_BdUbmm": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "Encuentra inspiración en @adda_home",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_BdUbmm"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "featured_collection_2_kBJnRt",
+    "collection_products_Y6Cg4d",
+    "multi_row_mf6hKD",
+    "1708016630c6e31cd8"
+  ]
+}

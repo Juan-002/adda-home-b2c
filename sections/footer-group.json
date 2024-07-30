@@ -1,0 +1,85 @@
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer_newsletter_YVE8mL": {
+      "type": "footer-newsletter",
+      "settings": {
+        "title": "¿Quieres recibir ofertas únicas?",
+        "description": "¡Únete a nuestra Newsletter y obtén un 10% de descuento en tu primera compra! No te preocupes, no hacemos spam.",
+        "placeholder": "Escribe tu email...",
+        "button": "SUSCRIBIRME",
+        "policy": "He leído y acepto la <a href=\"\/pages\/politica-de-privacidad\" target=\"_blank\" title=\"Política de Privacidad\">Política de Privacidad<\/a>.",
+        "success": "Gracias por suscribirte, este es tu código de descuento para tu siguiente compra: WELCOMEADDA10"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_7tkGET": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Información",
+            "menu": "footer-informacion"
+          }
+        },
+        "link-list-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Atención al cliente",
+            "menu": "footer-atencion-al-cliente"
+          }
+        },
+        "link-list-2": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Categorías",
+            "menu": "footer-categorias"
+          }
+        },
+        "social_EwUgBe": {
+          "type": "social",
+          "settings": {
+            "heading": "Síguenos",
+            "phone": "tel:+34 916 059 492",
+            "email": "mailto:info@addahome.com",
+            "social_image_1": "shopify:\/\/shop_images\/Group_46.png",
+            "social_url_1": "https:\/\/www.facebook.com\/addahomedeco2016\/",
+            "social_image_2": "shopify:\/\/shop_images\/Group_45.png",
+            "social_url_2": "https:\/\/www.pinterest.es\/addahome\/",
+            "social_image_3": "shopify:\/\/shop_images\/Group_44.png",
+            "social_url_3": "https:\/\/www.instagram.com\/adda_home\/?hl=en",
+            "social_image_4": "shopify:\/\/shop_images\/i-tiktok.png",
+            "social_url_4": "https:\/\/www.tiktok.com\/@addahome",
+            "social_image_5": "shopify:\/\/shop_images\/image_50_683fd89e-2103-4044-a405-b95a2af34cde.png",
+            "social_url_5": "https:\/\/www.lionshome.es\/",
+            "social_url_6": "shopify:\/\/collections\/all",
+            "social_url_7": "shopify:\/\/collections\/all",
+            "social_url_8": "shopify:\/\/collections\/all",
+            "social_url_9": "shopify:\/\/collections\/all",
+            "social_url_10": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_7tkGET",
+        "link-list-1",
+        "link-list-2",
+        "social_EwUgBe"
+      ],
+      "settings": {
+        "show_back_to_top": false,
+        "show_payment_icons": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "secondary_menu": "footer",
+        "bg_color": "#f4f4f4",
+        "text_color": "#070707"
+      }
+    }
+  },
+  "order": [
+    "footer_newsletter_YVE8mL",
+    "footer"
+  ]
+}

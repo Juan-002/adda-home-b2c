@@ -1,0 +1,74 @@
+.featured-collection-2{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.featured-collection-2 .featured-collection-2__title{
+    color: #3B342B;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+.featured-collection-2 .featured-collection-2__collections{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+.featured-collection-2 .featured-collection-2__collections .collections__collection{
+    position: relative;
+}
+.featured-collection-2 .featured-collection-2__collections .collections__collection .collection__info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.featured-collection-2 .featured-collection-2__collections .collections__collection .collection__image{
+    width: 100%;
+}
+.featured-collection-2 .featured-collection-2__collections .collections__collection .collection__info .info__title{
+    color: #FFF;
+    font-family: Georgia;
+    font-size: 42.509px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 35px;
+    min-width: 300px;
+}
+.featured-collection-2 .featured-collection-2__collections .collections__collection .collection__info .info__button{
+    color: #FFF;
+    font-size: 14.878px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: 1px solid #FFF;
+    padding: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@media (min-width: 767px){
+    .featured-collection-2 {
+        max-width: 90%;
+        margin: auto;
+    }
+    .featured-collection-2 .featured-collection-2__collections{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .featured-collection-2 .featured-collection-2__collections .collections__collection .collection__info .info__button:hover{
+        background-color: #FFF;
+        color: #000;
+    }
+}
+
+@media (min-width: 1024px){
+    .featured-collection-2 .featured-collection-2__collections{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

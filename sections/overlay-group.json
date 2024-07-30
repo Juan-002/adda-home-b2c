@@ -1,0 +1,157 @@
+{
+  "type": "aside",
+  "name": "Overlay group",
+  "sections": {
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "settings": {
+        "show_cart_page_link": false,
+        "show_backorder_text": false,
+        "show_vendor": false,
+        "position_cart_summary": "bottom",
+        "stick_footer": false,
+        "show_order_note": false,
+        "show_shipping_text_notice": false,
+        "show_additional_checkout_buttons": false,
+        "show_checkout_button": true,
+        "cart_terms_page": "",
+        "show_shipping_calculator": false,
+        "shipping_calculator_default_country": "España",
+        "promoted_products_visibility": "always",
+        "promoted_products_heading": "Promoted products",
+        "promoted_products_list": [],
+        "promoted_products_layout": "carousel",
+        "show_media_promotion": false,
+        "media_promotion_visibility": "always",
+        "link_url": "",
+        "media_promotion_min_height": 150,
+        "content": "<p>Promotion text<\/p>",
+        "text_type_scale": "1em",
+        "text_width": 400,
+        "text_alignment": "justify-center items-center text-center",
+        "button_label": "",
+        "button_style": "btn btn--secondary",
+        "text_color": "#ffffff",
+        "tint_color": "#000000",
+        "tint_opacity": 20
+      }
+    },
+    "product-compare": {
+      "type": "product-compare",
+      "blocks": {
+        "compare-1": {
+          "type": "image",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "compare-2": {
+          "type": "vendor",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "compare-3": {
+          "type": "title",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "compare-4": {
+          "type": "price",
+          "settings": {
+            "show_line": false
+          }
+        },
+        "compare-5": {
+          "type": "description",
+          "settings": {
+            "truncate_description": false,
+            "words_to_show": 20,
+            "show_line": false
+          }
+        },
+        "compare-6": {
+          "type": "variants",
+          "settings": {
+            "show_line": false
+          }
+        }
+      },
+      "block_order": [
+        "compare-1",
+        "compare-2",
+        "compare-3",
+        "compare-4",
+        "compare-5",
+        "compare-6"
+      ],
+      "settings": {}
+    },
+    "pop_up_wz4na8": {
+      "type": "pop-up",
+      "blocks": {
+        "heading_qit7me": {
+          "type": "heading",
+          "settings": {
+            "heading": "¿Quieres recibir ofertas únicas?",
+            "heading_size": "h4"
+          }
+        },
+        "text_B4axy3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>¡Únete a nuestra Newsletter y obtén un 10% de descuento en tu primera compra!<\/p><p>No te preocupes, no hacemos spam.<\/p>",
+            "text_size": ""
+          }
+        },
+        "newsletter_signup_jDxHjP": {
+          "type": "newsletter-signup",
+          "settings": {
+            "checkbox_label": "<p>He leído y acepto la <a href=\"#\" target=\"_blank\" title=\"#\">Política de Privacidad.<\/a><\/p>"
+          }
+        },
+        "image_yQLajh": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_88.png",
+            "image_position_desktop": "right",
+            "image_position_mobile": "hidden"
+          }
+        },
+        "social_AXQK3W": {
+          "type": "social",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_qit7me",
+        "text_B4axy3",
+        "newsletter_signup_jDxHjP",
+        "image_yQLajh",
+        "social_AXQK3W"
+      ],
+      "settings": {
+        "trigger": "delay",
+        "delay": 5,
+        "show_to_guests_only": true,
+        "show_on_mobile": true,
+        "dismiss_days": 30,
+        "position": "justify-center items-center",
+        "text_align": "text-start",
+        "padding": "large",
+        "shrink_width": true,
+        "heading_color": "#070707",
+        "text_color": "#070707",
+        "bg_color": "#ffffff",
+        "bg_grad": "",
+        "tint_opacity": 0
+      }
+    }
+  },
+  "order": [
+    "cart-drawer",
+    "product-compare",
+    "pop_up_wz4na8"
+  ]
+}

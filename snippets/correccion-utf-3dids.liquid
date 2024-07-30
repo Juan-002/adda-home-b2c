@@ -1,0 +1,42 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  // Función para reemplazar caracteres incorrectos
+  function fixEncoding(str) {
+    const replacements = {
+      'Ã¡': 'á',
+      'Ã©': 'é',
+      'Ã­': 'í',
+      'Ã³': 'ó',
+      'Ãº': 'ú',
+      'Ã±': 'ñ',
+      'Ã¼': 'ü',
+      'Ã‘': 'Ñ',
+      'Ãš': 'Ú',
+      'â€™': '’',
+      'â€œ': '“',
+      'â€': '”',
+      'â€“': '–',
+      'â€”': '—',
+      'â€¦': '…',
+      'â€¢': '•',
+      'â€˜': '‘',
+      'Â¿': '¿',
+      'Â¡': '¡',
+      'Ã': 'Á',
+      'Â': '',
+    };
+    
+    for (let key in replacements) {
+      str = str.split(key).join(replacements[key]);
+    }
+    return str;
+  }
+
+  // Selecciona los elementos que contienen texto que necesita ser reemplazado
+  const elementsToFix = document.querySelectorAll('.product-description, .other-selector');
+
+  elementsToFix.forEach(function(element) {
+    element.innerHTML = fixEncoding(element.innerHTML);
+  });
+});
+</script>

@@ -1,0 +1,188 @@
+{{ 'featured-collection-2.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .featured-collection-2--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .featured-collection-2--{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+<div class="featured-collection-2 featured-collection-2--{{ section.id }}">
+    {% if section.settings.title != blank %}
+        <{{ section.settings.title_tag }} class="featured-collection-2__title">{{ section.settings.title }}</{{ section.settings.title_tag }}>
+    {% endif %}
+    <div class="featured-collection-2__collections">
+        {% for block in section.blocks %}
+            <div class="collections__collection">
+                {% if block.settings.image != nil %}
+                    {{ block.settings.image | image_url: width: 600 | image_tag: class: "collection__image" }}
+                {% endif %}
+                <div class="collection__info">
+                    {% if block.settings.title != blank %}
+                        <{{ block.settings.title_tag }} class="info__title">{{ block.settings.title }}</{{ block.settings.title_tag }}>
+                    {% endif %}
+                    {% if block.settings.button_text != blank %}
+                        <a href="{{ block.settings.button_url }}" class="info__button" {% if block.settings.button_open %}target="_blank"{% endif %}>{{ block.settings.button_text }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+    {
+		"name": "Categorías destacadas",
+		"settings": [
+			{
+				"type": "text",
+				"id": "title",
+				"label": "Título",
+				"default": "Categorías destacadas"
+			},
+            {
+                "type": "select",
+                "id": "title_tag",
+                "label": "Etiqueta del título",
+                "options": [
+                    {
+                        "value": "h1",
+                        "label": "h1"
+                    },
+                    {
+                        "value": "h2",
+                        "label": "h2"
+                    },
+                    {
+                        "value": "h3",
+                        "label": "h3"
+                    },
+                    {
+                        "value": "h4",
+                        "label": "h4"
+                    },
+                    {
+                        "value": "h5",
+                        "label": "h5"
+                    },
+                    {
+                        "value": "h6",
+                        "label": "h6"
+                    },
+                    {
+                        "value": "p",
+                        "label": "p"
+                    }
+                ],
+                "default": "h2"
+            },
+            {
+                "type": "header",
+                "content": "Espaciado"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Arriba",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Abajo",
+                "default": 50
+            }
+		],
+        "blocks": [
+            {
+                "name": "Colección",
+                "type": "collection",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Título"
+                    },
+                    {
+                        "type": "select",
+                        "id": "title_tag",
+                        "label": "Etiqueta del título",
+                        "options": [
+                            {
+                                "value": "h1",
+                                "label": "h1"
+                            },
+                            {
+                                "value": "h2",
+                                "label": "h2"
+                            },
+                            {
+                                "value": "h3",
+                                "label": "h3"
+                            },
+                            {
+                                "value": "h4",
+                                "label": "h4"
+                            },
+                            {
+                                "value": "h5",
+                                "label": "h5"
+                            },
+                            {
+                                "value": "h6",
+                                "label": "h6"
+                            },
+                            {
+                                "value": "p",
+                                "label": "p"
+                            }
+                        ],
+                        "default": "h3"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text",
+                        "label": "Botón: Texto"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "Botón: URL",
+                        "default": "/collections/all"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "button_open",
+                        "label": "Botón: ¿Abrir en una nueva pestaña?",
+                        "default": false
+                    }
+                ]
+            }
+        ],
+		"presets": [
+			{
+				"name": "Categorías destacadas"
+			}
+		]
+    }
+{% endschema %}

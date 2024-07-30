@@ -1,0 +1,162 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product-labels": {
+          "type": "product-labels",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_weight": false
+          }
+        },
+        "wishlist_engine_product_page_trUGwr": {
+          "type": "shopify:\/\/apps\/wishlist-engine\/blocks\/Product-Page\/8f7c0857-8e71-463d-a168-8e133094753b",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": false
+          }
+        },
+        "divider-0": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "spacing": "mt-8 mb-8"
+          }
+        },
+        "vendor-sku": {
+          "type": "vendor-sku",
+          "settings": {
+            "show_vendor": false,
+            "show_sku": true,
+            "show_barcode": false
+          }
+        },
+        "description_8k3HfJ": {
+          "type": "description",
+          "settings": {
+            "show_as_collapsible_content": false,
+            "icon": "none",
+            "open": false
+          }
+        },
+        "buy-buttons": {
+          "type": "buy-buttons",
+          "settings": {
+            "show_qty_selector": true,
+            "enable_dynamic_checkout": false,
+            "show_pickup_availability": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "collapsible-content-1": {
+          "type": "collapsible-content",
+          "settings": {
+            "heading": "Características",
+            "icon": "none",
+            "text": "<p>Medidas: {{ product.metafields.custom.addagarpeancho.value }}x{{ product.metafields.custom.addagarpealto.value }}cm<\/p><p>Color: {{ product.metafields.custom.addagarpecolor.value }}<\/p><p>Material: {{ product.metafields.custom.addagarpematerial.value }}<\/p>",
+            "page": "",
+            "open": false
+          }
+        },
+        "collapsible-content-2": {
+          "type": "collapsible-content",
+          "settings": {
+            "heading": "Información de Envío",
+            "icon": "none",
+            "text": "<p>¡ENVÍOS GRATUITOS A PENÍNSULA a partir de 49€ de compra!<\/p><p>Realizamos envíos a Península, Baleares, Canarias, Ceuta, Melilla y Europa.<\/p><p>Para más información ve a <a href=\"\/pages\/envios\" title=\"Envíos\">Envíos<\/a>.<\/p>",
+            "page": "",
+            "open": false
+          }
+        },
+        "collapsible_content_ziPBtz": {
+          "type": "collapsible-content",
+          "settings": {
+            "heading": "Ayuda",
+            "icon": "none",
+            "text": "<p>Si tienes alguna duda o consulta puedes enviarnos un email a través de este <a href=\"\/pages\/contact\" title=\"Contáctanos\">formulario<\/a>.<br\/><br\/>También puedes contactarnos al teléfono <a href=\"tel:+34 916 059 492\" title=\"tel:+34 916 059 492\">+34 916 059 492<\/a><\/p><p>O al email <a href=\"mailto:info@addahome.com\" title=\"mailto:info@addahome.com\">info@addahome.com<\/a><\/p>",
+            "page": "",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "product-labels",
+        "title",
+        "wishlist_engine_product_page_trUGwr",
+        "price",
+        "divider-0",
+        "vendor-sku",
+        "description_8k3HfJ",
+        "buy-buttons",
+        "collapsible-content-1",
+        "collapsible-content-2",
+        "collapsible_content_ziPBtz"
+      ],
+      "custom_css": [
+        "button .btn--secondary {background-color: black !important;}"
+      ],
+      "settings": {
+        "stick_on_scroll": true,
+        "sticky_atc_panel": false,
+        "sticky_atc_position": "end",
+        "sticky_atc_mobile": true,
+        "media_layout": "slider",
+        "media_size": "default",
+        "media_ratio": "1",
+        "media_crop": "none",
+        "hover_zoom": "medium",
+        "enable_video_looping": false,
+        "stacked_scroll": "always",
+        "underline_active": true,
+        "media_thumbs": "desktop",
+        "thumb_ratio": "1",
+        "thumb_crop": "none",
+        "media_arrows": "desktop",
+        "show_slide_count": false,
+        "border_color": "#ffffff",
+        "bg_color": "#ffffff",
+        "enable_media_grouping": false,
+        "media_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "details": {
+      "type": "product-details",
+      "settings": {}
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Productos relacionados",
+        "heading_align": "text-center",
+        "layout": "grid",
+        "card_size_mobile": "large",
+        "card_size": "medium",
+        "products_to_show": 4
+      }
+    },
+    "recently_viewed_JwLATy": {
+      "type": "recently-viewed",
+      "settings": {
+        "heading": "Productos vistos recientemente",
+        "heading_align": "text-center",
+        "layout": "grid",
+        "card_size_mobile": "large",
+        "card_size": "medium",
+        "limit": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "details",
+    "recommendations",
+    "recently_viewed_JwLATy"
+  ]
+}

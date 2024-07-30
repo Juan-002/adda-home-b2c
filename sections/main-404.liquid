@@ -1,0 +1,62 @@
+<style>
+  .cc-main-404 {
+    margin-bottom: 60px;
+  }
+  .error-404 p{
+    color: #3B342B;
+    font-family: "Gotham";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+  }
+  .error-404 .error-code {
+    color: #3B342B;
+    font-size: 96px;
+    line-height: normal;
+    font-family: "Gotham";
+    font-weight: 500;
+  }
+  .error-404 h1{
+    color: #3B342B;
+    text-align: center;
+    font-family: "Gotham";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .error-404 a{
+    background: transparent;
+    border: 1px solid #D3A87B;
+    color: #D3A87B;
+    font-family: "Gotham";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 15px;
+    transition: all 0.3s;
+  }
+  .error-404 a:hover{
+    border-color: #3B342B;
+    color: #3B342B;
+  }
+
+</style>
+
+<div class="container text-center error-404">
+  <p class="error-code mb-0 font-bold">404</p>
+  <h1 class="h4 text-center">{{ 'templates.404.title' | t }}</h1>
+  <p>{{ 'templates.404.subtext' | t }}</p>
+  <p class="mt-12">
+    <a class="btn btn--primary" href="{{ routes.root_url }}">{{ 'templates.404.link' | t }}</a>
+  </p>
+</div>
+
+{% schema %}
+{
+  "name": "404",
+  "class": "cc-main-404 section section--template"
+}
+{% endschema %}

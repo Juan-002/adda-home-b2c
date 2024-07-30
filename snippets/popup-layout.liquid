@@ -1,0 +1,327 @@
+<style>
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .modal__content  {
+      width: calc(100%);
+      flex: unset;
+      padding: 36px 30px 32px;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window{
+      overflow: unset;
+      margin: 0 41px ;
+
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__close-btn{
+      top: unset;
+      right: 0;
+      background-color: transparent;
+      bottom: 100%;
+      padding: 0 0 6px 0;
+      display: flex;
+      align-items: center;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__close-btn svg{
+      width: 20px;
+      height: 20px;
+    }
+    
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__close-btn svg > *{
+      fill: #FFF;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__close-btn .text-close{
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 10px;
+      color: #FFF;
+      margin-right: 5px;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .display-mb{
+      display: block;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .input-with-button button.btn{
+      display: none;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .pop-up_custom{
+      width: 100%;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .pop-up_custom h2{
+      font-family: Georgia, Gotham, Arial, Helvetica;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 29.54px;
+      margin-bottom: 18px;
+      color: #3B342B;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .section__block.rte {
+      margin-bottom: 30px;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .section__block.rte p{
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 12.44px;
+      margin-bottom: 12.44px;
+      color: #3B342B;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .section__block.rte > p:last-child{
+      margin-bottom: 0;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .input-with-button{
+      box-shadow: unset;
+      border-bottom: 2px solid #3B342B;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .input{
+      border: unset;
+      box-shadow: unset;
+      margin: 0;
+      padding: 0 16px 7px 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 13.4px;
+      color: #8C8C8C;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .input::placeholder{
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 13.4px;
+      color: #8C8C8C;
+    }
+
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .input:focus-visible{
+      border: unset;
+      box-shadow: unset;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window > .input:focus{
+      border: unset;
+      box-shadow: unset;
+    }
+    [adda-popup-layout] button.btn{
+      flex: 0 0 auto;
+      padding: 13px;
+      box-shadow: none;
+      border: 1px solid #3B342B;
+      background-color: #3B342B;
+      background: #3B342B;
+      color: #FFF;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-top: 35px;
+      width: 100%;
+      line-height: 11px;
+    }      
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .checkbox-cs{
+      color: #3B342B;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 9.57px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: flex-start;
+      margin-top: 13.25px;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .checkbox-cs input{
+      margin: 0 6px 0 0;
+      font-size: 20px;
+      opacity: 0;
+      width: 11px;
+      height: 11px;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .checkbox-cs .input-check{
+      height: 8px;
+      width: 8px;
+      border: 1px solid #000;
+      position: relative;
+      left: 0;
+      top: unset;
+      margin: 2px 6px 0 0;
+      transform: unset;
+      cursor: pointer;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .checkbox-cs input:checked + .input-check::after{
+      content: '';
+      height: 6px;
+      width: 6px;
+      border: 1px solid #FFF;
+      position: absolute;
+      left: 50%;
+      margin-top: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #000;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .label-checkbox p{
+      margin: 0;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .label-checkbox a{
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 9.57px;
+      text-decoration: underline;
+      color: #3B342B!important;
+    }
+    .popup-section .section__block:not(:last-child){
+      margin-bottom: 36px;
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .social .social__link{
+      width: 44.37;
+      height: 44.37;
+      padding: 6px;
+      color: rgb(var(--text-color));
+    }
+    [adda-popup-layout].popup-section.popup-section--shrink .modal__window .social {
+      margin: -6px auto -6px;
+      width: 100%;
+      justify-content: center;
+    }
+    [adda-popup-layout]{
+      z-index: 99;
+    }
+    @media (min-width: 769px) {
+      [adda-popup-layout].popup-section.popup-section--shrink .display-mb{
+        display: none;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .input-with-button button.btn{
+        display: block;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window{
+        width: 86%;
+        max-width: 86%;
+        min-width: unset;
+        margin: 0;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .modal__image {
+        width: 38.71%;
+        flex: 0 0 38.71%;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .modal__content  {
+        width: calc(100% - 38.71%);
+        flex: unset;
+        padding: 51px 44px 23.5px 39px;
+      }
+      [adda-popup-layout] button.btn{
+        flex: 0 0 auto;
+        padding: 0 0 9px 0;
+        box-shadow: none;
+        border: unset;
+        background-color: transparent;
+        background: transparent;
+        color: #3B342B;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 0;
+        width: auto;
+        line-height: 14.31px;
+      }      
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .social .social__link{
+        width: 56px;
+        height: 56px;
+        padding: 7.5px;
+        color: rgb(var(--text-color));
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .social {
+        margin: -7.5px 0 -7.5px -7.5px;
+        justify-content: flex-start;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .pop-up_custom h2{
+        font-family: Georgia, Gotham, Arial, Helvetica;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 36.36px;
+        margin-bottom: 23px;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .section__block.rte {
+        margin-bottom: 41px;
+        width: 83%;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .section__block.rte p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 15.31px;
+        margin-bottom: 15.31px;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .section__block.rte > p:last-child{
+        margin-bottom: 0;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .input-with-button{
+        box-shadow: unset;
+        border-bottom: 2px solid #3B342B;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .input{
+        border: unset;
+        box-shadow: unset;
+        margin: 0;
+        padding: 0 16px 9px 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 15.31px;
+        color: #8C8C8C;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .input::placeholder{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 15.31px;
+        color: #8C8C8C;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .checkbox-cs{
+        color: #3B342B;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 12.44px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+        margin-top: 11px;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .label-checkbox a{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 12.44px;
+        text-decoration: underline;
+        color: #3B342B!important;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__close-btn{
+        padding: 0 0 10px 0;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .checkbox-cs .input-check{
+        height: 11px;
+        width: 11px;
+        border: 1px solid #000;
+        position: relative;
+        left: 0;
+        top: unset;
+        margin: 2px 6px 0 0;
+        transform: unset;
+        cursor: pointer;
+      }
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window .checkbox-cs input:checked + .input-check::after{
+        content: '';
+        height: 9.5px;
+        width: 9.5px;
+        border: 1px solid #FFF;
+        position: absolute;
+        left: 50%;
+        margin-top: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #000;
+      }
+      .popup-section .section__block:not(:last-child){
+        margin-bottom: 28px;
+      }
+    }
+    @media (min-width: 1200px) {
+      [adda-popup-layout].popup-section.popup-section--shrink .modal__window{
+        width: 64.58333333333334%;
+        max-width: 930px;
+        min-width: unset;
+        margin: 0;
+      }
+    }
+  </style>

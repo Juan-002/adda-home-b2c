@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": false,
+        "heading_align": "text-center"
+      }
+    },
+    "multi_row_qLdqXL": {
+      "type": "multi-row",
+      "blocks": {
+        "row_Membbz": {
+          "type": "row",
+          "settings": {
+            "image_position": "right",
+            "image": "shopify:\/\/shop_images\/Frame_7.jpg",
+            "title": "Adda Home",
+            "title_tag": "h2",
+            "title_underline": true,
+            "description": "<p>Adda Home no es un punto de venta de decoración más. Es lo que va a intentar conseguir Adda, una joven arquitecta que, aportando su experiencia personal y profesional, arranca este proyecto con ilusión y muchas ganas de ser un referente en la decoración de vuestras casas. Comenzó a trabajar cuando tenía 16 años en una tienda de decoración y le empezó a fascinar el mundo de la arquitectura y la decoración. Cuando tuvo la edad, se marchó de su casa para estudiar la carrera de arquitectura. Era la primera vez que salía de casa y, aunque lo hizo con miedo, fue la mejor decisión que pudo tomar.<\/p>",
+            "button_text": "",
+            "button_url": "shopify:\/\/collections\/all",
+            "button_open": false
+          }
+        },
+        "row_NagQWt": {
+          "type": "row",
+          "settings": {
+            "image_position": "left",
+            "image": "shopify:\/\/shop_images\/Frame_7-2.jpg",
+            "title": "",
+            "title_tag": "h2",
+            "title_underline": false,
+            "description": "<p>Estudió la carrera en Alemania y, gracias al dinero que tenía ahorrado, no paró de conocer todos los rincones más especiales de la región. Esto despertó en ella una inquietud por conocer más fuera de allí. En su tercer año de carrera decidió parar. Estaba en edad de ello, así que cogió una mochila y comenzó a viajar durante tres años. Se dio cuenta de la gran diversidad de estilos en temas de decoración y arquitectura que había en cada uno de los países.<\/p>",
+            "button_text": "",
+            "button_url": "shopify:\/\/collections\/all",
+            "button_open": false
+          }
+        },
+        "row_8NheBr": {
+          "type": "row",
+          "settings": {
+            "image_position": "right",
+            "image": "shopify:\/\/shop_images\/thumbnail_Adda_Home_Sobre_Nosotros.jpg",
+            "title": "",
+            "title_tag": "h2",
+            "title_underline": false,
+            "description": "<p>Cuando regresó a Alemania acabó la carrera, pero ya tenía claro el sueño que quería cumplir: emprender para poder ofrecer al público piezas y productos diferentes a lo que estaban acostumbrados a ver. Con esta idea nació Adda Home. Se le ocurrió crear una marca que tuviera piezas de estilos diferentes, quería que no pasara desapercibida para nadie y que cualquier cultura pudiera sentirse reflejada en alguno de sus productos. Fiel a su filosofía de vida, Adda dedica su tiempo en crear colecciones de muebles y decoración con un toque diferente. Sus colecciones serán especiales por el producto, por cómo se va a presentar y por lo que van a transmitir al público. Nuestra prioridad es escucharos y saber vuestras necesidades para hacer de vuestro hogar, un rincón único y especial.<\/p>",
+            "button_text": "",
+            "button_url": "shopify:\/\/collections\/all",
+            "button_open": false
+          }
+        }
+      },
+      "block_order": [
+        "row_Membbz",
+        "row_NagQWt",
+        "row_8NheBr"
+      ],
+      "settings": {
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multi_row_qLdqXL"
+  ]
+}

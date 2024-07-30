@@ -1,0 +1,110 @@
+{{ 'footer-newsletter.css' | asset_url | stylesheet_tag }}
+
+{% liquid 
+	assign id_form = "footer-newsletter" | append: section.id
+%}
+<div class="footer-newsletter">
+	{% if section.settings.title != blank %}
+		<p class="footer-newsletter__title">{{ section.settings.title  }}</p>
+	{% endif %}
+	{% if section.settings.description != blank %}
+		<p class="footer-newsletter__description">{{ section.settings.description }}</p>
+	{% endif %}
+	{% form 'customer', id: id_form %}
+		<input type="hidden" name="return_to" value="{{ canonical_url }}?customer_posted=true">
+		<div class="footer-newsletter__email">
+			<input 
+				type="email"
+				class="footer-newsletter__email"
+				name="contact[email]"
+				value="{{ form.email }}"
+				id="{{ id_form }}-email"
+				placeholder="{{ section.settings.placeholder }}"
+				autocomplete="email"
+				{%- if form.posted_successfully? %}
+					aria-describedby="{{ id_form }}-email-success"
+				{%- elsif form.errors %}
+					aria-invalid="true"
+					aria-describedby="{{ id_form }}-email-error"
+					autofocus
+				{%- endif %}
+				aria-required="true"
+				required
+			>
+			<button type="submit">{{ section.settings.button }}</button>
+		</div>
+		<div class="footer-newsletter__policy">
+			<input type="checkbox" name="policy" id="{{ id_form }}-policy" required>
+			<span>{{ section.settings.policy }}</span>
+		</div>
+		
+		{%- if form.errors -%}
+			<p class="footer-newsletter__error" id="{{ id_form }}-error">
+				{{ form.errors.translated_fields['email'] | capitalize }}
+				{{ form.errors.messages['email'] }}
+			</p>
+		{%- endif -%}
+
+		{%- if form.posted_successfully? -%}
+			<div class="footer-newsletter__success alert bg-success-bg text-success-text" id="{{ id_form }}-success" tabindex="-1" autofocus>
+			  {{ section.settings.success }}
+			</div>
+		  {%- endif -%}
+	{% endform %}	  
+</div>
+
+{% schema %}
+    {
+		"name": "Newsletter footer",
+		"settings": [
+			{
+				"type": "text",
+				"id": "title",
+				"label": "Título",
+				"default": "¿Quieres recibir ofertas únicas?"
+			},
+			{
+				"type": "text",
+				"id": "description",
+				"label": "Descripción",
+				"default": "¡Únete a nuestra Newsletter y obtén un 15% de descuento en tu primera compra! No te preocupes, no hacemos spam."
+			},
+			{
+				"type": "header",
+				"content": "Formulario"
+			},
+			{
+				"type": "text",
+				"id": "placeholder",
+				"label": "Placeholder",
+				"default": "Escribe tu email..."
+			},
+			{
+				"type": "text",
+				"id": "button",
+				"label": "Botón",
+				"default": "SUSCRIBIRME"
+			},
+			{
+				"type": "inline_richtext",
+				"id": "policy",
+				"label": "Políticas",
+				"default": "He leído y acepto la Política de Privacidad."
+			},
+			{
+				"type": "text",
+				"id": "success",
+				"label": "Mensaje de formulario enviado correctamente",
+				"default": "Gracias por suscribirte."
+			}
+		],
+		"enabled_on": {
+			"groups": ["footer"]
+		},
+		"presets": [
+			{
+				"name": "Newsletter footer"
+			}
+		]
+    }
+{% endschema %}

@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "collection-banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_title": true,
+        "show_product_count": false,
+        "show_collection_description": false,
+        "text_align": "items-center text-center",
+        "collection_image": "natural",
+        "use_product_image": false,
+        "text_width": "wide",
+        "color_scheme": "3"
+      }
+    },
+    "countdown-timer": {
+      "type": "countdown-timer",
+      "blocks": {
+        "countdown-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ofertas",
+            "heading_size": "h2"
+          }
+        },
+        "countdown-countdown-3": {
+          "type": "countdown",
+          "settings": {
+            "end_date": "2024\/08\/22",
+            "end_time": "",
+            "end_text": "",
+            "enlarge_end_text": false,
+            "hide_on_end": false
+          }
+        }
+      },
+      "block_order": [
+        "countdown-heading-1",
+        "countdown-countdown-3"
+      ],
+      "custom_css": [],
+      "settings": {
+        "height_mode": "fixed",
+        "fixed_height_desktop": 570,
+        "fixed_height_mobile": 350,
+        "overlay_position": "justify-center",
+        "text_align": "text-center",
+        "mob_center_text": false,
+        "countdown_size": "24",
+        "use_custom_colors": false,
+        "count_color": "#ffffff",
+        "bg_color": "#070707",
+        "color_scheme": "3",
+        "full_width": true,
+        "tint_color": "#000000",
+        "tint_opacity": 0
+      }
+    },
+    "collection-products": {
+      "type": "main-collection-products",
+      "settings": {
+        "products_per_page": 16,
+        "card_size_mobile": "small",
+        "card_size": "medium",
+        "show_layout_toggle": false,
+        "enable_filtering": true,
+        "filters_open_lg": false,
+        "stick_on_scroll": true,
+        "show_filter_counts": false,
+        "expand_filters": false,
+        "show_filter_deadends": false,
+        "max_filter_options": 7,
+        "enable_sorting": true,
+        "show_feat_sort_opt": false,
+        "sort_first": false
+      }
+    }
+  },
+  "order": [
+    "collection-banner",
+    "countdown-timer",
+    "collection-products"
+  ]
+}

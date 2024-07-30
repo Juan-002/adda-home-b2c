@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {}
+    },
+    "recently_viewed_iCcUKE": {
+      "type": "recently-viewed",
+      "settings": {
+        "heading": "Vistos recientemente",
+        "heading_align": "text-start",
+        "layout": "carousel",
+        "card_size_mobile": "small",
+        "card_size": "small",
+        "limit": 8
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently_viewed_iCcUKE"
+  ]
+}

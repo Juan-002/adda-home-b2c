@@ -1,0 +1,162 @@
+{{ 'collection-products.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .collection-products--{{ section.id }} {
+		padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+		padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+		.collection-products--{{ section.id }} {
+			padding-top: {{ section.settings.padding_top }}px;
+			padding-bottom: {{ section.settings.padding_bottom }}px;
+		}
+    }
+{%- endstyle -%}
+
+<div class="collection-products collection-products--{{ section.id }}">
+	{% if section.settings.title != blank %}
+        <{{ section.settings.title_tag }} class="collection-products__title">{{ section.settings.title }}</{{ section.settings.title_tag }}>
+    {% endif %}
+    <div class="collection-products__buttons">
+		{% for  block in section.blocks %}
+			<button data-collection-id="{{ block.id }}" class="{% if forloop.first %}active{% endif %}">{{ block.settings.title }}</button>	
+		{% endfor %}
+	</div>
+	<div class="collection-products__collections">
+		{% for  block in section.blocks %}
+            <div data-id="{{ block.id }}" class="collections__collecion {% unless forloop.first %}hide{% endunless %}">	
+				{% if block.settings.collection.products %}
+                    {% assign n_products = section.settings.number_of_products | default: 8 %}
+                    {% assign products_count = 0 %}
+					{% paginate block.settings.collection.products by n_products %}
+						{% for product in block.settings.collection.products -%}
+                            {% unless n_products <= products_count %}
+                                {% assign products_count = products_count | plus: 1 %}
+                                <div class="collection__product">{% render 'product-card', product: product, collection: block.settings.collection %}</div>
+                            {% endunless %}
+						{%- endfor %}
+					{% endpaginate %}
+				{% endif %}
+			</div>	
+		{% endfor %}
+	</div>
+</div>
+
+<script>
+    let collection_id = ".collection-products--{{ section.id }}";
+    document.addEventListener("DOMContentLoaded", function(){
+        let collection_section = document.querySelector(collection_id);
+        collection_section.querySelectorAll(".collection-products__buttons button").forEach((e) => {
+            e.addEventListener("click", function(){
+                e.parentNode.querySelectorAll("button").forEach((j) => j.classList.remove("active"));
+                e.classList.add("active");
+                collection_section.querySelectorAll(".collections__collecion").forEach((j) => j.classList.add("hide"));
+                collection_section.querySelector(".collections__collecion[data-id='" + e.dataset.collectionId + "']")?.classList.remove("hide");
+            });
+        });
+    }, false);
+</script>
+
+{% schema %}
+    {
+		"name": "Colecciones",
+		"settings": [
+			{
+				"type": "text",
+				"id": "title",
+				"label": "Título",
+				"default": "Top ventas"
+			},
+			{
+                "type": "select",
+                "id": "title_tag",
+                "label": "Etiqueta del título",
+                "options": [
+                    {
+						"value": "h1",
+						"label": "h1"
+                    },
+                    {
+                        "value": "h2",
+                        "label": "h2"
+                    },
+                    {
+                        "value": "h3",
+                        "label": "h3"
+                    },
+                    {
+                        "value": "h4",
+                        "label": "h4"
+                    },
+                    {
+                        "value": "h5",
+                        "label": "h5"
+                    },
+                    {
+                        "value": "h6",
+                        "label": "h6"
+                    },
+                    {
+                        "value": "p",
+                        "label": "p"
+                    }
+                ],
+                "default": "h2"
+            },
+			{
+				"type": "number",
+				"id": "number_of_products",
+				"label": "Número máximo de productos",
+				"default": 8
+			},
+            {
+                "type": "header",
+                "content": "Espaciado"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Arriba",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Abajo",
+                "default": 50
+            }
+		],
+        "blocks": [
+            {
+                "name": "Colección",
+                "type": "collection",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Título"
+                    },
+					{
+						"type": "collection",
+						"id": "collection",
+						"label": "Colección"
+					}
+                ]
+            }
+        ],
+		"presets": [
+			{
+				"name": "Colecciones"
+			}
+		]
+    }
+{% endschema %}

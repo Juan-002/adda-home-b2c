@@ -1,0 +1,182 @@
+{{ 'multi-row.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .multi-row--{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .multi-row--{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+<div class="multi-row multi-row--{{ section.id }}">
+    {% for block in section.blocks %}
+        {% style %}
+            .multi-row__row--{{ block.id }} .row__image{
+                order: {% if block.settings.image_position == "left" %}1{% else %}2{% endif %}
+            }
+            .multi-row__row--{{ block.id }} .row__info{
+                order: {% if block.settings.image_position == "left" %}2{% else %}1{% endif %}
+            }
+        {% endstyle %}
+        <div class="multi-row__row multi-row__row--{{ block.id }}">
+            <div class="row__image">
+                {% if block.settings.image != nil %}
+                    {{ block.settings.image | image_url: width: 1024 |  image_tag }}
+                {% endif %}
+            </div>
+            <div class="row__info">
+                <div class="info__container">
+                    {% if block.settings.title != blank %}
+                    <{{ block.settings.title_tag }} class="info__title {% if block.settings.title_underline %}info__title--underline{% endif %}">{{ block.settings.title }}</{{ block.settings.title_tag }}>
+                    {% endif %}
+                    {% if block.settings.description != blank %}
+                        <div class="info__description">{{ block.settings.description }}</div>
+                    {% endif %}
+                    {% if block.settings.button_text != blank %}
+                        <a href="{{ block.settings.button_url }}" class="info__button" {% if block.settings.button_open %}target="_blank"{% endif %}>{{ block.settings.button_text }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% schema %}
+    {
+		"name": "Multi filas",
+		"settings": [
+            {
+                "type": "header",
+                "content": "Espaciado"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Arriba",
+                "default": 50
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "label": "Abajo",
+                "default": 50
+            }
+		],
+        "blocks": [
+            {
+                "name": "Fila",
+                "type": "row",
+                "settings": [
+                    {
+                        "type": "select",
+                        "id": "image_position",
+                        "label": "¿Dónde va la imagen?",
+                        "options": [
+                            {
+                                "value": "left",
+                                "label": "Izquierda"
+                            },
+                            {
+                                "value": "right",
+                                "label": "Derecha"
+                            }
+                        ],
+                        "default": "left"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Título"
+                    },
+                    {
+                        "type": "select",
+                        "id": "title_tag",
+                        "label": "Etiqueta del título",
+                        "options": [
+                            {
+                                "value": "h1",
+                                "label": "h1"
+                            },
+                            {
+                                "value": "h2",
+                                "label": "h2"
+                            },
+                            {
+                                "value": "h3",
+                                "label": "h3"
+                            },
+                            {
+                                "value": "h4",
+                                "label": "h4"
+                            },
+                            {
+                                "value": "h5",
+                                "label": "h5"
+                            },
+                            {
+                                "value": "h6",
+                                "label": "h6"
+                            },
+                            {
+                                "value": "p",
+                                "label": "p"
+                            }
+                        ],
+                        "default": "h2"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "title_underline",
+                        "label": "Title underline"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Descripción"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text",
+                        "label": "Botón: Texto"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "Botón: URL",
+                        "default": "/collections/all"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "button_open",
+                        "label": "Botón: ¿Abrir en una nueva pestaña?",
+                        "default": false
+                    }
+                ]
+            }
+        ],
+		"presets": [
+			{
+				"name": "Multi filas"
+			}
+		]
+    }
+{% endschema %}
